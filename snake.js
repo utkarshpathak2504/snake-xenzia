@@ -99,7 +99,7 @@ var nextX,nextY;
         var last_y=Math.round(h/cs);
 
 
-        if(this.cells[0].y<0 || this.cells[0].x<0 ||this.cells[0].x>last_x-.20|| this.cells[0].y>last_y-.55 ){
+        if(this.cells[0].y<0 || this.cells[0].x<0 ||this.cells[0].x>last_x-.20|| this.cells[0].y>last_y){
             gameover=true;
         }
 
@@ -137,7 +137,7 @@ var nextX,nextY;
 function draw(){
     pen.clearRect(0,0,w,h);  // to remove the old frames of the snake and update it  like it is moving
     snake.drawsnake();
-    pen.drawImage( trophyimage,25,20,cs,cs);
+    pen.drawImage( trophyimage,24,20,cs,cs);
     pen.drawImage( foodimage,food.x*cs,food.y*cs,cs,cs);
     pen.font="25px Roboto";
     pen.fillText(score,50,50);
